@@ -1,29 +1,28 @@
-<h1>{{name}}</h1>
+<h1>{{ name }}</h1>
 <dl>
   <td>Nombre:</td>
-  <dd>{{name}}</dd>
-
+  <dd>{{ name }}</dd>
   <td>Edad:</td>
-  <dd>{{age}}</dd>
-
+  <dd>{{ age }}</dd>
   <td>Metodo: Mostrar Nombre y Edad</td>
-  <dd>{{getHeroDescription()}}</dd>
-
+  <dd>{{ getHeroDescription() }}</dd>
   <td>Capitalizad:</td>
-  <dd>{{capitalizeName}}</dd>
-
+  <dd>{{ capitalizeName }}</dd>
 </dl>
-
-<div *ngIf="name !=='Spiderman'">
-  <input #inputName placeholder="Ingresa el Nombre" type="text" >
-  <button (click)="changeHero(inputName.value)" class="btn btn-primary mx-2">Cambiar nombre</button>
-</div>
-<div *ngIf=" this.age !== 35">
-  <input #inputAge placeholder="Ingresa la Edad" type="text" >
-  <button (click)="changeAge(inputAge.value)" class="btn btn-primary mx-2">Cambiar Nombre</button>
-</div>
-<br>
-
-<button  (click)="resetForm()" id="#reset" class="btn btn-warning mx-2" onc>
-  Restablecer
+<div *ngIf="name !== 'Spiderman'">
+  <input #inputName placeholder="Ingresa el Nombre" type="text" />
+  <button (click)="changeHero(inputName.value)" class="btn btn-primary mx-2">
+    Cambiar nombre
   </button>
+</div>
+<div *ngIf="this.age !== 35">
+  <input #inputAge placeholder="Ingresa la Edad" type="text" />
+  <button (click)="changeAge(inputAge.value)" class="btn btn-primary mx-2">
+    Cambiar Nombre
+  </button>
+</div>
+<br />
+<button (click)="resetForm()" id="#reset" class="btn btn-warning mx-2" onc>
+  Restablecer
+</button>
+

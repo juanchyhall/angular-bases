@@ -9,8 +9,7 @@ export class HeroComponent{
 
       public name:string = 'Sin Nombre';
       public age:number = 1;
-
-
+      
       get capitalizeName():string{
         return this.name.toLocaleUpperCase();
       }
