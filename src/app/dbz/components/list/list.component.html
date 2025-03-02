@@ -1,12 +1,12 @@
-  <h4>Listado</h4>
+  <h4>Listado de Personajes: </h4>
   <ul class="list-group">
 
     <li *ngFor="let character of characterList;
-      let i = index;
       let isFirst = first;
       let isLast = last;
       let isEven = even;
       let isOdd = odd;
+      let i = index;
       "
       class="list-group-item d-flex justify-content-between align-items-center"
       [ngClass]="{'list-group-item-success': isFirst,
@@ -18,8 +18,7 @@
           <strong>Power: </strong>
           <span>{{character.power}}</span>
       </div>
-        <button class="btn btn-danger" (click)="ondeleteCharacter(i)">X</button>
-    </li>
-    <p>Ultimo Personaje Borrado: <span class="text-danger">{{lastDeleted}}</span></p>
-  </ul>
+        <button class="btn btn-danger" (click)="ondeleteCharacter(character.id);">X</button>
+      </li>
+    </ul>
 

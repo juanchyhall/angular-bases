@@ -12,14 +12,14 @@ export class ListComponent {
   @Input()
   public characterList:Character[] = [];
 
-  @Input()
-  public lastDeleted:string = ""
+  @Output()
+  public onDelete:EventEmitter<string> = new EventEmitter();
 
   @Output()
-  public onDelete:EventEmitter<number> = new EventEmitter();
+  public showDeleted:EventEmitter<string> = new EventEmitter()
 
-
-  ondeleteCharacter(index:number):void{
-    this.onDelete.emit(index)
+  ondeleteCharacter(id?:string):void{
+    if(!id)return;
+    this.onDelete.emit(id)
   }
 }

@@ -1,23 +1,12 @@
 <h4>Agregar Nuevo Personaje</h4>
     <form class="row" (ngSubmit)="addCharacter();">
-
-      <input
-      type="text"
-      class="form-control mb-2"
-      [(ngModel)]="character.name"
-      name="name"
-      class="form-control mb-2"
-      placeholder="Nombre del personaje">
-      <input
-      type="number"
-      [(ngModel)]="character.power"
-      name="power"
-      class="form-control mb-2"
-      placeholder="Poder del personaje">
-
+      <input type="text" class="form-control mb-2" [(ngModel)]="character.name" name="name"
+      class="form-control mb-2" placeholder="Nombre del personaje">
+      <input type="number" [(ngModel)]="character.power" name="power"
+       class="form-control mb-2" placeholder="Poder del personaje">
       <button type="submit" class="btn btn-primary">
         Agregar Personaje
       </button>
-
-    <!-- <pre>{{character | json}}</pre> -->
+      <h4>Ultimo personage agregado: {{lastCreated}}</h4>
+      <!-- <pre>{{character | json}}</pre> -->
     </form>

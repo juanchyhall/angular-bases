@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  public title:string = 'Mi AngularApp';
+  public title:string = 'App - DBZ - Angular';
 
 
 
